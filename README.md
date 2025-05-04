@@ -11,8 +11,8 @@ This repository contains a [LaTeX](https://github.com/latex3/latex2e) template t
 + Clone the repository to your local machine.
 + Start editing the LaTeX file `cv.tex` to replace the boilerplate content with the content of your CV. 
 + Compile `cv.tex` with pdfTeX. This will generate a PDF file of your CV named `cv.pdf`.
-+ The LaTeX style file `cv.sty` collects all the commands to format the cv. The file must be included in the same folder as `cv.tex`. It can be modified to alter the CV's format.
-+ The file `cv.pdf` is not required to use the template. It only illustrate the output of the template. It will be overridden once `cv.tex` is compiled.
++ The LaTeX style file `cv.sty` collects all the commands to format the CV. The file must be included in the same folder as `cv.tex`. It can be modified to alter the CV's format.
++ The `cv.pdf` file is not required: it only illustrate the output of the template. It will be overridden once `cv.tex` is compiled.
 + Note: The template is not very user-friendly at the moment. I plan to improve usability when time permits. 
 
 ## Software
