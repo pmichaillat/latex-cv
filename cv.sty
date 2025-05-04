@@ -1,0 +1,124 @@
+% ---- Select text fonts ----
+
+% Make PDF searchable and copyable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Select font encoding 
+\usepackage[T1]{fontenc}
+
+% Select text font
+\usepackage{sourceserifpro}
+
+% Select monospaced font
+\usepackage{sourcecodepro}
+
+% Select URL font
+\usepackage[hyphens]{url}
+
+% ---- Select math fonts ----
+
+% Select symbol font
+\usepackage{MnSymbol}
+
+% Select calligraphic and blackboard-bold fonts
+\usepackage[cal=euler,bb=fourier]{mathalpha}
+
+% Select font for Roman letters, Greek letters, digits, and punctuation
+\usepackage[italic,eulergreek,nolessnomore,noparenthesis,noplusnominus,noequal,nohbar]{mathastext}
+
+% ---- Adjust page layout ----
+
+% Customize page dimensions
+\usepackage{geometry}
+
+% Set top margin
+\geometry{top=0.9in}
+
+% Set bottom margin
+\geometry{bottom=1.1in}
+
+% Set side margins
+\geometry{left=1.2in,right=1.2in}
+
+% Set placement of page number
+\geometry{footskip=0.7in}
+
+% ---- Adjust spacing ----
+
+% Customize spacing between lines
+\usepackage{setspace}
+
+% Set spacing between lines
+\setstretch{1.1}
+
+% Set spacing on lines
+\usepackage{microtype}
+
+% ---- Select color scheme ----
+
+\usepackage[x11names]{xcolor}
+
+% ---- Format header and footer ----
+
+% Customize headers and footers
+\usepackage{fancyhdr}
+
+% Activate custom header and footer
+\pagestyle{fancy}
+
+% Eliminate header line
+\renewcommand{\headrule}{}
+
+% Clear header and footer
+\fancyhf{}
+
+% ---- Format section headings ----
+
+% Customize section headings
+\usepackage{titlesec}
+
+% Format section headings
+\titleformat*{\section}{\centering\Huge\scshape}
+
+% Format subsection headings
+\titleformat*{\subsection}{\vskip-3mm\bfseries\scshape\color{gray}}
+
+% ---- Format lists ----
+
+% Customize lists
+\usepackage{enumitem}
+\usepackage[leftmargin=2em]{etaremune}
+
+% Format itemized lists
+\setlist[itemize,1]{leftmargin=2em,label=\color{gray}{\textendash}}
+
+% Format forward-numbered lists
+\setlist[enumerate,1]{leftmargin=2em}
+
+% Format items for numbered lists
+\renewcommand{\labelenumi}{\color{gray}\theenumi.}
+
+% ---- Enable hyperlinks  ----
+
+\usepackage[pdftex, hidelinks, hypertexnames=false, pdfpagemode=UseNone, pdfdisplaydoctitle=true]{hyperref}
+
+% ---- Define CV commands ----
+
+% Command for inline separator
+\newcommand{\sep}{{\color{gray}\,\textbullet\,\,}}
+
+% Command for block separator
+\newcommand{\hsep}{\noindent\rule{\textwidth}{1pt}}
+
+% Command for CV title
+\newcommand{\name}[1]{\section*{#1}}
+
+% Command for block heading
+\newcommand{\block}[1]{\hsep\subsection*{{#1}}}
+
+% Command for coauthor entry
+\newcommand{\with}[1]{\,(with #1)}
+
+% Command for gray footer
+\newcommand{\grayfoot}[2]{\fancyfoot[#1]{\footnotesize\textcolor{gray}{#2}}}
