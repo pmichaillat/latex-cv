@@ -24,3 +24,7 @@ While the template should also work on other operating systems and with other La
 ## License
 
 This repository is licensed under the [MIT License](LICENSE.md).
+
+## Related resources
+
++ [hugo-website](https://github.com/pmichaillat/hugo-website) - This Hugo template produces a minimalist academic website that can host your academic CV.
