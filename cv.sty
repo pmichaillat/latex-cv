@@ -1,0 +1,113 @@
+% ---- Select text fonts ----
+
+% Make PDF searchable and copyable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Select font encoding 
+\usepackage[T1]{fontenc}
+
+% Select text font
+\usepackage{sourceserifpro}
+
+% Select monospaced font
+\usepackage{sourcecodepro}
+
+% Select URL font
+\usepackage[hyphens]{url}
+
+% ---- Select math fonts ----
+
+% Select symbol font
+\usepackage{MnSymbol}
+
+% Select calligraphic and blackboard-bold fonts
+\usepackage[cal=euler,bb=fourier]{mathalpha}
+
+% Select font for Roman letters, Greek letters, digits, and punctuation
+\usepackage[italic,eulergreek,nolessnomore,noparenthesis,noplusnominus,noequal,nohbar]{mathastext}
+
+% ---- Adjust page layout ----
+
+% Customize page dimensions
+\usepackage{geometry}
+
+% Set top margin
+\geometry{top=0.9in}
+
+% Set bottom margin
+\geometry{bottom=1.1in}
+
+% Set side margins
+\geometry{left=1.2in,right=1.2in}
+
+% Set placement of page number
+\geometry{footskip=0.7in}
+
+% ---- Adjust spacing ----
+
+% Customize spacing between lines
+\usepackage{setspace}
+
+% Set spacing between lines
+\setstretch{1.1}
+
+% Set spacing on lines
+\usepackage{microtype}
+
+% ---- Select color scheme ----
+
+\usepackage[x11names]{xcolor}
+
+% ---- Format header and footer ----
+
+% Customize headers and footers
+\usepackage{fancyhdr}
+
+% Activate custom header and footer
+\pagestyle{fancy}
+
+% Eliminate header line
+\renewcommand{\headrule}{}
+
+% Clear header and footer
+\fancyhf{}
+
+% ---- Format section headings ----
+
+% Customize section headings
+\usepackage{titlesec}
+
+% Format section headings
+\titleformat*{\section}{\centering\Huge\scshape}
+
+% Format subsection headings
+\titleformat*{\subsection}{\vskip-3mm\bfseries\scshape\color{gray}}
+
+% ---- Format lists ----
+
+% Customize lists
+\usepackage{enumitem}
+
+% Format itemized lists
+\setlist[itemize,1]{leftmargin=*,label=\color{gray}{\textendash}} % First level
+\setlist[itemize,2]{leftmargin=\parindent,label=\color{gray}{\textendash}} % Second level
+
+% Format numbered lists
+\setlist[enumerate,1]{leftmargin=*,label=\color{gray}{\alph*.}} % First level
+\setlist[enumerate,2]{leftmargin=2\parindent,label=\color{gray}{\roman*.}} % Second level
+
+% ---- Enable hyperlinks  ----
+
+\usepackage[pdftex, hidelinks, hypertexnames=false, pdfpagemode=UseNone, pdfdisplaydoctitle=true]{hyperref}
+
+% ---- Define shortcuts for CV ----
+
+% Inline separator
+\newcommand{\sep}{{\color{gray}\,\textbullet\,\,}}
+
+% Section separator
+\newcommand{\hsep}{\noindent\rule{\textwidth}{1pt}}
+
+% Coauthor
+\newcommand{\with}[1]{\,(with #1)}
