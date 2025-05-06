@@ -88,14 +88,16 @@
 
 % Customize lists
 \usepackage{enumitem}
+\usepackage[leftmargin=2em]{etaremune}
 
 % Format itemized lists
-\setlist[itemize,1]{leftmargin=*,label=\color{gray}{\textendash}} % First level
-\setlist[itemize,2]{leftmargin=\parindent,label=\color{gray}{\textendash}} % Second level
+\setlist[itemize,1]{leftmargin=2em,label=\color{gray}{\textendash}} % First level
 
-% Format numbered lists
-\setlist[enumerate,1]{leftmargin=*,label=\color{gray}{\alph*.}} % First level
-\setlist[enumerate,2]{leftmargin=2\parindent,label=\color{gray}{\roman*.}} % Second level
+% Format forward-numbered lists
+\setlist[enumerate,1]{leftmargin=2em}
+
+% Format items for numbered lists
+\renewcommand{\labelenumi}{\color{gray}\theenumi.}
 
 % ---- Enable hyperlinks  ----
 
