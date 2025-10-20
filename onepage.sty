@@ -37,16 +37,16 @@
 \usepackage{geometry}
 
 % Set top margin
-\geometry{top=0.9in}
+\geometry{top=0.8in}
 
 % Set bottom margin
-\geometry{bottom=1.1in}
+\geometry{bottom=1in}
 
 % Set side margins
 \geometry{left=1.2in,right=1.2in}
 
 % Set placement of page number
-\geometry{footskip=0.7in}
+\geometry{footskip=0.8in}
 
 % ---- Adjust spacing ----
 
@@ -54,7 +54,7 @@
 \usepackage{setspace}
 
 % Set spacing between lines
-\setstretch{1.1}
+\setstretch{1}
 
 % Set spacing on lines
 \usepackage{microtype}
@@ -92,16 +92,9 @@
 
 % Customize lists
 \usepackage{enumitem}
-\usepackage[leftmargin=2em]{etaremune}
 
 % Format itemized lists
-\setlist[itemize,1]{leftmargin=2em,label=\color{gray}{\textendash}}
-
-% Format forward-numbered lists
-\setlist[enumerate,1]{leftmargin=2em}
-
-% Format items for numbered lists
-\renewcommand{\labelenumi}{\color{gray}\theenumi.}
+\setlist[itemize,1]{leftmargin=1.5em,label=\color{gray}{\textendash},itemsep=2.5pt,parsep=0pt,topsep=0pt}
 
 % ---- Enable hyperlinks  ----
 
@@ -117,7 +110,7 @@
 
 % Command for block separator
 \newcommand{\hsep}{\noindent\textcolor{gray}{\rule{\textwidth}{0.7pt}}}
-
+	
 % Command for block heading
 \newcommand{\block}[1]{\begin{samepage}\hsep\subsection*{{#1}}\end{samepage}}
 
