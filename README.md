@@ -8,7 +8,7 @@ The template and its variant are documented at https://pascalmichaillat.org/f/.
 
 ## Illustration
 
-The CV produced by the template can be viewed at https://pascalmichaillat.org/f.pdf. The one-page CV can be viewed at https://pascalmichaillat.org/f1.pdf.
+The CV produced by the template can be viewed at https://pascalmichaillat.org/f.pdf. The one-page CV can be viewed at https://pascalmichaillat.org/fo.pdf.
 
 ## Usage
 
@@ -21,7 +21,7 @@ The CV produced by the template can be viewed at https://pascalmichaillat.org/f.
 
 ## Software
 
-+ The template was developed with TeX Live 2023 on MacOS. 
++ The template was developed with TeX Live 2025 on MacOS. 
 + Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-math/issues) to help improve compatibility.
 
 ## License
@@ -31,4 +31,3 @@ This repository is licensed under the [MIT License](LICENSE.md).
 ## Related resources
 
 + [hugo-website](https://github.com/pmichaillat/hugo-website) - This Hugo template produces a minimalist academic website that can host your academic CV.
-+ [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces academic papers with a similar appearance as this CV template. 
