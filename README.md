@@ -17,12 +17,13 @@ The CV produced by the template can be viewed at https://pascalmichaillat.org/f.
 + Compile `cv.tex` with pdfTeX. This will generate a PDF file of your CV named `cv.pdf`.
 + The LaTeX style file `cv.sty` collects all the commands to format the CV. The file must be included in the same folder as `cv.tex`. It can be modified to alter the CV's format.
 + The `cv.pdf` file is not required: it only illustrates the output of the template. It will be overridden once `cv.tex` is compiled.
-+ To produce a one-page CV, edit the LaTeX file `onepage.tex` instead of `cv.tex`, and follow the same steps. All the commands to format the one-page CV are in the LaTeX style file `onepage.sty`. 
+
+To produce a one-page CV, edit the LaTeX file `onepage.tex` instead of `cv.tex`, and follow the same steps. The commands specific to the one-page CV are in the LaTeX style file `onepage.sty` (which must be used in conjunction with `cv.sty`). 
 
 ## Software
 
-+ The template was developed with TeX Live 2025 on MacOS. 
-+ Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-math/issues) to help improve compatibility.
++ The template is currently operational with TeX Live 2025 on macOS.
++ Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-cv/issues) to help improve compatibility.
 
 ## License
 

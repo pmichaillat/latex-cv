@@ -17,36 +17,26 @@
 % Select monospaced font
 \usepackage{sourcecodepro}
 
-% Select URL font
-\usepackage[hyphens]{url}
-
 % ---- Select math fonts ----
 
 % Select symbol font
 \usepackage{MnSymbol}
 
 % Select calligraphic and blackboard-bold fonts
-\usepackage[cal=euler,bb=fourier]{mathalpha}
+\usepackage[cal=euler, bb=fourier]{mathalpha}
 
 % Select font for Roman letters, Greek letters, digits, and punctuation
-\usepackage[italic,eulergreek,nolessnomore,noparenthesis,noplusnominus,noequal,nohbar]{mathastext}
+\usepackage[italic, eulergreek, nolessnomore, noparenthesis, noplusnominus, noequal, nohbar]{mathastext}
+
+% Correct spacing around certain Roman letters
+\MTsetmathskips{f}{3mu}{0mu}
+\MTsetmathskips{y}{2mu}{0mu}
+\MTsetmathskips{p}{2mu}{0mu}
+\MTsetmathskips{j}{2mu}{0mu}
 
 % ---- Adjust page layout ----
 
-% Customize page dimensions
-\usepackage{geometry}
-
-% Set top margin
-\geometry{top=0.9in}
-
-% Set bottom margin
-\geometry{bottom=1.1in}
-
-% Set side margins
-\geometry{left=1.2in,right=1.2in}
-
-% Set placement of page number
-\geometry{footskip=0.7in}
+\usepackage[top=0.9in, left=1.2in, right=1.2in, bottom=1.1in, footskip=0.7in]{geometry}
 
 % ---- Adjust spacing ----
 
@@ -56,8 +46,11 @@
 % Set spacing between lines
 \setstretch{1.1}
 
-% Set spacing on lines
+% Adjust spacing on lines
 \usepackage{microtype}
+
+% Adjust spacing in text
+\AtBeginDocument{\frenchspacing}
 
 % ---- Select color scheme ----
 
@@ -72,7 +65,7 @@
 \pagestyle{fancy}
 
 % Eliminate header line
-\renewcommand{\headrule}{}
+\renewcommand{\headrulewidth}{0pt}
 
 % Clear header and footer
 \fancyhf{}
@@ -92,25 +85,28 @@
 
 % Customize lists
 \usepackage{enumitem}
-\usepackage[leftmargin=2em]{etaremune}
 
 % Format itemized lists
-\setlist[itemize,1]{leftmargin=2em,label=\color{gray}{\textendash}}
+\setlist[itemize, 1]{leftmargin=2em, label=\color{gray}{\textendash}}
 
 % Format forward-numbered lists
-\setlist[enumerate,1]{leftmargin=2em}
+\setlist[enumerate, 1]{leftmargin=2em}
+
+% Format backward-numbered lists
+\usepackage[leftmargin=2em]{etaremune}
 
 % Format items for numbered lists
 \renewcommand{\labelenumi}{\color{gray}\theenumi.}
 
 % ---- Enable hyperlinks  ----
 
+\PassOptionsToPackage{hyphens}{url}
 \usepackage[pdftex, hidelinks, hypertexnames=false, pdfpagemode=UseNone, pdfdisplaydoctitle=true]{hyperref}
 
 % ---- Define CV commands ----
 
 % Command for CV title
-\newcommand{\name}[1]{\section*{#1}}
+\newcommand*{\name}[1]{\section*{#1}}
 
 % Command for inline separator
 \newcommand{\sep}{{\color{gray}\,\textbullet\,\,}}
@@ -119,10 +115,10 @@
 \newcommand{\hsep}{\noindent\textcolor{gray}{\rule{\textwidth}{0.7pt}}}
 
 % Command for block heading
-\newcommand{\block}[1]{\begin{samepage}\hsep\subsection*{{#1}}\end{samepage}}
+\newcommand*{\block}[1]{\begin{samepage}\hsep\subsection*{{#1}}\end{samepage}}
 
 % Command for coauthor entry
-\newcommand{\with}[1]{\,(with #1)}
+\newcommand*{\with}[1]{\,(with #1)}
 
 % Command for gray footer
-\newcommand{\grayfoot}[2]{\fancyfoot[#1]{\footnotesize\textcolor{gray}{#2}}}
+\newcommand*{\grayfoot}[2]{\fancyfoot[#1]{\footnotesize\textcolor{gray}{#2}}}

@@ -1,121 +1,16 @@
-% ---- Select text fonts ----
-
-% Make PDF searchable and copyable
-\input{glyphtounicode}
-\pdfgentounicode=1
-
-% Select font encoding 
-\usepackage[T1]{fontenc}
-
-% Select text font
-\usepackage{sourceserifpro}
-
-% Define semibold font series
-\DeclareRobustCommand{\sbseries}{\fontseries{sb}\selectfont}
-\DeclareTextFontCommand{\textsb}{\sbseries}
-
-% Select monospaced font
-\usepackage{sourcecodepro}
-
-% Select URL font
-\usepackage[hyphens]{url}
-
-% ---- Select math fonts ----
-
-% Select symbol font
-\usepackage{MnSymbol}
-
-% Select calligraphic and blackboard-bold fonts
-\usepackage[cal=euler,bb=fourier]{mathalpha}
-
-% Select font for Roman letters, Greek letters, digits, and punctuation
-\usepackage[italic,eulergreek,nolessnomore,noparenthesis,noplusnominus,noequal,nohbar]{mathastext}
 
 % ---- Adjust page layout ----
 
-% Customize page dimensions
-\usepackage{geometry}
+\geometry{top=0.8in, left=1.2in, right=1.2in, bottom=1in, footskip=0.8in}
 
-% Set top margin
-\geometry{top=0.8in}
+% ---- Adjust line spacing ----
 
-% Set bottom margin
-\geometry{bottom=1in}
-
-% Set side margins
-\geometry{left=1.2in,right=1.2in}
-
-% Set placement of page number
-\geometry{footskip=0.8in}
-
-% ---- Adjust spacing ----
-
-% Customize spacing between lines
-\usepackage{setspace}
-
-% Set spacing between lines
 \setstretch{1}
-
-% Set spacing on lines
-\usepackage{microtype}
-
-% ---- Select color scheme ----
-
-\usepackage[x11names]{xcolor}
-
-% ---- Format header and footer ----
-
-% Customize headers and footers
-\usepackage{fancyhdr}
-
-% Activate custom header and footer
-\pagestyle{fancy}
-
-% Eliminate header line
-\renewcommand{\headrule}{}
-
-% Clear header and footer
-\fancyhf{}
-
-% ---- Format section headings ----
-
-% Customize section headings
-\usepackage{titlesec}
-
-% Format section headings
-\titleformat*{\section}{\centering\Huge\scshape}
-
-% Format subsection headings
-\titleformat*{\subsection}{\vskip-3mm\sbseries\scshape\color{gray}}
 
 % ---- Format lists ----
 
-% Customize lists
-\usepackage{enumitem}
-
 % Format itemized lists
-\setlist[itemize,1]{leftmargin=1.5em,label=\color{gray}{\textendash},itemsep=2.5pt,parsep=0pt,topsep=0pt}
+\setlist[itemize, 1]{leftmargin=2em, label=\color{gray}{\textendash}, itemsep=2.5pt, parsep=0pt, topsep=0pt}
 
-% ---- Enable hyperlinks  ----
-
-\usepackage[pdftex, hidelinks, hypertexnames=false, pdfpagemode=UseNone, pdfdisplaydoctitle=true]{hyperref}
-
-% ---- Define CV commands ----
-
-% Command for CV title
-\newcommand{\name}[1]{\section*{#1}}
-
-% Command for inline separator
-\newcommand{\sep}{{\color{gray}\,\textbullet\,\,}}
-
-% Command for block separator
-\newcommand{\hsep}{\noindent\textcolor{gray}{\rule{\textwidth}{0.7pt}}}
-	
-% Command for block heading
-\newcommand{\block}[1]{\begin{samepage}\hsep\subsection*{{#1}}\end{samepage}}
-
-% Command for coauthor entry
-\newcommand{\with}[1]{\,(with #1)}
-
-% Command for gray footer
-\newcommand{\grayfoot}[2]{\fancyfoot[#1]{\footnotesize\textcolor{gray}{#2}}}
+% Format numbered lists
+\setlist[enumerate, 1]{leftmargin=2em, label=\color{gray}{\arabic*.}, itemsep=2.5pt, parsep=0pt, topsep=0pt}
