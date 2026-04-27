@@ -1,6 +1,6 @@
 # Minimalist LaTeX Template for Academic CVs
 
-This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic CV. The template carefully follows typographical best practices and has a minimalist design. It is particularly well suited for researchers, professors, and other academics. The design emphasizes clarity, structure, and visual simplicity. The repository also contains a variant of the template to create a one-page CV. The variant produces a more compact CV.
+This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic CV. The template carefully follows typographical best practices and has a minimalist design. It is particularly well suited for researchers, professors, and other academics. The design emphasizes clarity, structure, and visual simplicity. The repository also contains a variant of the template to create a compact, one-page CV.
 
 ## Documentation
 
