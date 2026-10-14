@@ -36,7 +36,7 @@
 
 % ---- Adjust page layout ----
 
-\usepackage[top=0.9in, left=1.2in, right=1.2in, bottom=1.1in, footskip=0.7in]{geometry}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1.1in, footskip=0.7in]{geometry}
 
 % ---- Adjust spacing ----
 
@@ -87,7 +87,7 @@
 \usepackage{enumitem}
 
 % Format itemized lists
-\setlist[itemize, 1]{leftmargin=2em, label=\color{gray}{\textendash}}
+\setlist[itemize, 1]{leftmargin=2em, label=\color{gray}{$\circ$}}
 
 % Format forward-numbered lists
 \setlist[enumerate, 1]{leftmargin=2em}
@@ -109,10 +109,10 @@
 \newcommand*{\name}[1]{\section*{#1}}
 
 % Command for inline separator
-\newcommand{\sep}{{\color{gray}\,\textbullet\,\,}}
+\newcommand{\sep}{{\,\textperiodcentered\,\,}}
 
 % Command for block separator
-\newcommand{\hsep}{\noindent\textcolor{gray}{\rule{\textwidth}{0.7pt}}}
+\newcommand{\hsep}{\noindent\textcolor{gray}{\rule{\textwidth}{0.5pt}}}
 
 % Command for block heading
 \newcommand*{\block}[1]{\begin{samepage}\hsep\subsection*{{#1}}\end{samepage}}
