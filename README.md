@@ -6,7 +6,7 @@ This repository contains a [LaTeX](https://github.com/latex3/latex2e) template t
 
 The template and its variant are documented at https://pascalmichaillat.org/f/.
 
-## Illustration
+## Preview
 
 The CV produced by the template can be viewed at https://pascalmichaillat.org/f.pdf. The one-page CV can be viewed at https://pascalmichaillat.org/fo.pdf.
 
