@@ -14,9 +14,6 @@
 \DeclareRobustCommand{\sbseries}{\fontseries{sb}\selectfont}
 \DeclareTextFontCommand{\textsb}{\sbseries}
 
-% Select monospaced font
-\usepackage{sourcecodepro}
-
 % ---- Select math fonts ----
 
 % Select symbol font
@@ -36,7 +33,7 @@
 
 % ---- Adjust page layout ----
 
-\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1.1in, footskip=0.7in]{geometry}
+\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1.1in, footskip=0.8in]{geometry}
 
 % ---- Adjust spacing ----
 
@@ -46,15 +43,20 @@
 % Set spacing between lines
 \setstretch{1.1}
 
-% Adjust spacing on lines
-\usepackage{microtype}
+% Adjust micro spacing
+\usepackage[tracking=smallcaps]{microtype}
+\SetTracking{encoding=*, shape=sc}{30}
 
 % Adjust spacing in text
 \AtBeginDocument{\frenchspacing}
 
-% ---- Select color scheme ----
+% ---- Select font color ----
 
-\usepackage[x11names]{xcolor}
+% Customize color scheme
+\usepackage{xcolor}
+
+% Define gray color
+\definecolor{ink}{gray}{0.4}
 
 % ---- Format header and footer ----
 
@@ -76,10 +78,11 @@
 \usepackage{titlesec}
 
 % Format section headings
-\titleformat*{\section}{\centering\Huge\scshape}
+\titleformat*{\section}{\centering\huge\sbseries\scshape}
 
 % Format subsection headings
-\titleformat*{\subsection}{\vskip-3mm\sbseries\scshape\color{gray}}
+\titleformat*{\subsection}{\sbseries\scshape\color{ink}}
+\titlespacing*{\subsection}{0pt}{1ex}{1.5ex}
 
 % ---- Format lists ----
 
@@ -87,21 +90,22 @@
 \usepackage{enumitem}
 
 % Format itemized lists
-\setlist[itemize, 1]{leftmargin=2em, label=\color{gray}{$\circ$}}
+\setlist[itemize, 1]{leftmargin=2em, label=\color{ink}{$\circ$}, after=\vspace{-1ex}}
 
 % Format forward-numbered lists
-\setlist[enumerate, 1]{leftmargin=2em}
+\setlist[enumerate, 1]{leftmargin=2em, after=\vspace{-1ex}}
 
 % Format backward-numbered lists
 \usepackage[leftmargin=2em]{etaremune}
 
 % Format items for numbered lists
-\renewcommand{\labelenumi}{\color{gray}\theenumi.}
+\renewcommand{\labelenumi}{\color{ink}\theenumi.}
 
 % ---- Enable hyperlinks  ----
 
 \PassOptionsToPackage{hyphens}{url}
 \usepackage[hidelinks, hypertexnames=false, pdfpagemode=UseNone, pdfdisplaydoctitle=true]{hyperref}
+\urlstyle{same}
 
 % ---- Define CV commands ----
 
@@ -112,7 +116,7 @@
 \newcommand{\sep}{{\,\textperiodcentered\,\,}}
 
 % Command for block separator
-\newcommand{\hsep}{\noindent\textcolor{gray}{\rule{\textwidth}{0.5pt}}}
+\newcommand{\hsep}{\noindent\textcolor{ink}{\rule{\textwidth}{0.5pt}}}
 
 % Command for block heading
 \newcommand*{\block}[1]{\begin{samepage}\hsep\subsection*{{#1}}\end{samepage}}
@@ -120,5 +124,5 @@
 % Command for coauthor entry
 \newcommand*{\with}[1]{\,(with #1)}
 
-% Command for gray footer
-\newcommand*{\grayfoot}[2]{\fancyfoot[#1]{\footnotesize\textcolor{gray}{#2}}}
+% Command for CV footer
+\newcommand*{\cvfoot}[2]{\fancyfoot[#1]{\footnotesize\textcolor{ink}{#2}}}
