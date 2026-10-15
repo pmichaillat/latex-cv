@@ -4,7 +4,7 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 
-% Select font encoding 
+% Select font encoding
 \usepackage[T1]{fontenc}
 
 % Select text font
@@ -33,7 +33,7 @@
 
 % ---- Adjust page layout ----
 
-\usepackage[top=1in, left=1.25in, right=1.25in, bottom=1.1in, footskip=0.8in]{geometry}
+\usepackage[top=1in, left=1.3in, right=1.3in, bottom=1.1in, footskip=0.8in]{geometry}
 
 % ---- Adjust spacing ----
 
@@ -45,9 +45,11 @@
 
 % Adjust micro spacing
 \usepackage[tracking=smallcaps]{microtype}
+
+% Letterspace small caps
 \SetTracking{encoding=*, shape=sc}{30}
 
-% Adjust spacing in text
+% Adjust spacing after punctuation
 \AtBeginDocument{\frenchspacing}
 
 % ---- Select font color ----
@@ -101,7 +103,7 @@
 % Format items for numbered lists
 \renewcommand{\labelenumi}{\color{ink}\theenumi.}
 
-% ---- Enable hyperlinks  ----
+% ---- Enable hyperlinks ----
 
 \usepackage[hidelinks, hypertexnames=false, pdfpagemode=UseNone, pdfdisplaydoctitle=true]{hyperref}
 
