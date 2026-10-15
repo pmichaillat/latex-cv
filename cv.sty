@@ -47,7 +47,7 @@
 \usepackage[tracking=smallcaps]{microtype}
 
 % Letterspace small caps
-\SetTracking{encoding=*, shape=sc}{30}
+\SetTracking{encoding=*, shape=sc}{40}
 
 % Adjust spacing after punctuation
 \AtBeginDocument{\frenchspacing}
@@ -58,7 +58,7 @@
 \usepackage{xcolor}
 
 % Define gray color
-\definecolor{ink}{gray}{0.4}
+\definecolor{ink}{gray}{0.3}
 
 % ---- Format header and footer ----
 
@@ -81,9 +81,10 @@
 
 % Format section headings
 \titleformat*{\section}{\centering\Huge\scshape}
+\titlespacing*{\section}{0pt}{1ex}{1ex}
 
 % Format subsection headings
-\titleformat*{\subsection}{\sbseries\scshape\color{ink}}
+\titleformat*{\subsection}{\scshape\color{ink}}
 \titlespacing*{\subsection}{0pt}{1ex}{1.5ex}
 
 % ---- Format lists ----
